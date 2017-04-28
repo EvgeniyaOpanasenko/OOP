@@ -17,6 +17,15 @@ public class MyArrayListTest {
     public void setUp() throws Exception {
         array = new int[]{1, 2, 3, 4};
         list = new MyArrayListImpl();
+        initList();
+    }
+
+    private void initList() {
+        list.add(1);
+        list.add(15);
+        list.add(47);
+        list.add(0);
+
     }
 
     @After
@@ -61,8 +70,11 @@ public class MyArrayListTest {
     @Test
     public void sort() throws Exception {
         int[] mixedArr = {23, 65, 1, 5, 3};
-        int[] expected = {1, 3, 5, 23, 65};
+        int[] expected = {0, 1, 15, 47};
+        assertArrayEquals(expected, list.sort());
+
 
     }
+
 
 }

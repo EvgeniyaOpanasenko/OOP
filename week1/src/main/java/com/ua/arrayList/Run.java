@@ -25,6 +25,8 @@ public class Run {
         arr.add(1);
         arr.print();
 
+        arr.sort();
+
 
     }
 }

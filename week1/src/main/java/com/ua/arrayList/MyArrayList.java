@@ -21,7 +21,7 @@ public interface MyArrayList {
     // 1 2 3 4 * 3 = 3 + 6 + 9+ 12 = 30
     int multAndSum(int[] a, int[] b);
 
-    public void sort(int[] mas);
+    public int[] sort();
 
     boolean add(int i);
 

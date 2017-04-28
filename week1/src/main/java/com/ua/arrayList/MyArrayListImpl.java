@@ -17,10 +17,10 @@ public class MyArrayListImpl implements MyArrayList {
 
     @Override
     public boolean add(int element) {
-        size ++;
+        size++;
 
         for (int i = 0; i < mas.length; i++) {
-            if (isEpty(mas[i])){
+            if (isEpty(mas[i])) {
                 mas[i] = element;
                 return true;
             }
@@ -35,7 +35,7 @@ public class MyArrayListImpl implements MyArrayList {
 
     private boolean isEpty(int element) {
         for (int i = 0; i < mas.length; i++) {
-            if (mas[i] == 0){
+            if (mas[i] == 0) {
                 return true;
             }
         }
@@ -53,7 +53,8 @@ public class MyArrayListImpl implements MyArrayList {
 
     @Override
     public String toString(int[] mas) {
-        return null;
+
+        return Arrays.toString(mas);
     }
 
     @Override
@@ -115,7 +116,7 @@ public class MyArrayListImpl implements MyArrayList {
     }
 
     @Override
-    public void sort(int[] mas) {
-
+    public int[] sort() {
+        return mas;
     }
 }
