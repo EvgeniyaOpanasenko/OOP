@@ -11,13 +11,9 @@ import com.ua.groupIntro.service.MainServiceImpl;
  */
 public class Run {
     public static void main(String[] args) throws DuplicateDatException {
-        Group group = new Group(10);
-        MainService service = new MainServiceImpl(group);
 
-        System.out.println(group.getSize());
-        service.addStudent(new Student("Ivan", 12, 2));
-
-        System.out.println(group);
+        MainService service = new MainServiceImpl();
+        service.startApp();
 
 
     }

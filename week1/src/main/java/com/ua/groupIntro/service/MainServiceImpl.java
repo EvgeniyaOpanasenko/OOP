@@ -6,6 +6,7 @@ import com.ua.groupIntro.exceptions.NoStudentsFoundException;
 import com.ua.groupIntro.model.Group;
 import com.ua.groupIntro.model.Student;
 import com.ua.groupIntro.utils.ListInit;
+import com.ua.groupIntro.views.AddStudentView;
 
 import java.util.List;
 import java.util.Optional;
@@ -20,12 +21,14 @@ public class MainServiceImpl implements MainService {
     private Group group;
     private ListInit list;
     private List<Student> students;
+    private AddStudentView view;
+    private int studentCount;
 
-
-    public MainServiceImpl(Group group) {
+    public MainServiceImpl() {
+        view = new AddStudentView();
         this.group = group;
         students = list.getStudentsList();
-
+        studentCount = 0;
     }
 
     @Override
@@ -66,5 +69,22 @@ public class MainServiceImpl implements MainService {
             e.printStackTrace();
         }
         return null;
+    }
+
+    @Override
+    public void startApp() {
+        view.printHelloMessage();
+        int size = view.getSize();
+        group = new Group(size);
+        addStudentView(size);
+        //view.showAllStudent();
+    }
+
+    private void addStudentView(int size) {
+        do {
+            view.showAddStudentMassage();
+            addStudent(new Student(view.getName(), view.getAge(), view.getPhone()));
+            studentCount ++;
+        }while (studentCount < size);
     }
 }

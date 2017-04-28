@@ -16,4 +16,6 @@ public interface MainService {
     boolean addStudent(Student student) throws DuplicateDatException;
     boolean removeStudent(Student student) throws InvalidInputOrNoSuchDtudentException;
     Optional<Student> findStudentByName(Student student) throws InvalidInputOrNoSuchDtudentException;
+
+    void startApp();
 }
