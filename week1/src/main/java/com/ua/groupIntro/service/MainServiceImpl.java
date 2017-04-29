@@ -17,18 +17,19 @@ import java.util.Optional;
 public class MainServiceImpl implements MainService {
 
     private Student student;
-    // contains List of students
     private Group group;
     private ListInit list;
     private List<Student> students;
     private AddStudentView view;
     private int studentCount;
 
+
     public MainServiceImpl() {
-        view = new AddStudentView();
+        this.list = new ListInit();
+        this.students = list.getStudentsList();
+        this.view = new AddStudentView();
+        this.studentCount = 0;
         this.group = group;
-        students = list.getStudentsList();
-        studentCount = 0;
     }
 
     @Override
@@ -41,7 +42,7 @@ public class MainServiceImpl implements MainService {
         if (student != null && !(students.contains(student))){
             students.add(student); return true;
         } else try {
-            throw new DuplicateDatException("Such student allredy exust");
+            throw new DuplicateDatException("Such student already exist");
         } catch (DuplicateDatException e) {
             e.printStackTrace();
         }
@@ -76,8 +77,9 @@ public class MainServiceImpl implements MainService {
         view.printHelloMessage();
         int size = view.getSize();
         group = new Group(size);
+        view.showAddStudentMassage();
         addStudentView(size);
-        //view.showAllStudent();
+        //view.showAllStudent(showAllStudents());
     }
 
     private void addStudentView(int size) {

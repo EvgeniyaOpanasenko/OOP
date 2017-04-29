@@ -14,7 +14,7 @@ public interface MyArrayList {
 
     void printUsingStream(int[] mas);
 
-    int min(int[] mas);
+    int min(int[] mas) throws EmptyArrayException;
 
     int sum(int[] a, int[] b);
 

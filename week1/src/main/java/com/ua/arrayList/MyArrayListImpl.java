@@ -86,23 +86,27 @@ public class MyArrayListImpl implements MyArrayList {
 
     @Override
     public void print(int[] mas) {
+        System.out.println(toString(mas));
 
     }
 
     @Override
     public void printUsingStream(int[] mas) {
-
+        System.out.println(Arrays.stream(mas));
     }
 
     @Override
-    public int min(int[] mas) {
-        int min = mas[0];
-        for (int i = 0; i < mas.length; i++) {
-            if (mas[i] < min) {
-                min = mas[i];
+    public int min(int[] mas) throws EmptyArrayException {
+        if (mas != null) {
+            int min = mas[0];
+            for (int i = 0; i < mas.length; i++) {
+                if (mas[i] < min) {
+                    min = mas[i];
+                    return min;
+                }
             }
         }
-        return min;
+        throw new EmptyArrayException();
     }
 
     @Override

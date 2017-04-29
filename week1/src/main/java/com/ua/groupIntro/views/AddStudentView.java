@@ -1,10 +1,8 @@
 package com.ua.groupIntro.views;
 
-import com.ua.groupIntro.exceptions.NoStudentsFoundException;
 import com.ua.groupIntro.model.Student;
 import com.ua.groupIntro.service.MainService;
 import com.ua.groupIntro.service.MainServiceImpl;
-import com.ua.groupIntro.utils.ListInit;
 
 import java.util.List;
 import java.util.Scanner;
@@ -18,13 +16,11 @@ public class AddStudentView {
     private String name;
     private int age;
     private int phone;
+    private MainService service;
 
     public AddStudentView() {
-        this.size = size;
-        this.name = name;
-        this.age = age;
-        this.phone = phone;
-        this.scanner = new Scanner(System.in);
+        scanner = new Scanner(System.in);
+        this.service = new MainServiceImpl();
     }
 
     public void showAddStudentMassage() {
@@ -36,9 +32,9 @@ public class AddStudentView {
         phone = scanner.nextInt();
     }
 
-    public void showAllStudent() {
-
-
+    public void showAllStudent(List<Student> students) {
+        System.out.println("Students list");
+        System.out.println(students);
     }
 
 

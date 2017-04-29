@@ -13,7 +13,7 @@ public class Group {
     private List<Student> students;
 
     public Group(int size) {
-        this.size = size;
+        this.size = this.size;
         students = getStudentsList();
     }
 
