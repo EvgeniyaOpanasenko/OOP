@@ -5,6 +5,6 @@ package com.ua.arrayList;
  */
 public class EmptyArrayException extends Exception {
     public EmptyArrayException() {
-        super(message);
+        super("");
     }
 }

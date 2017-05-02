@@ -4,9 +4,7 @@ import java.util.List;
 
 import static com.ua.groupIntro.utils.ListInit.getStudentsList;
 
-/**
- * Created by User on 4/28/2017.
- */
+
 public class Group {
 
     private int size;
@@ -14,7 +12,7 @@ public class Group {
 
     public Group(int size) {
         this.size = this.size;
-        students = getStudentsList();
+        this.students = getStudentsList();
     }
 
     @Override

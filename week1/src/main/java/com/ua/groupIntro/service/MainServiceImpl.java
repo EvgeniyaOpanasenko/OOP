@@ -28,12 +28,13 @@ public class MainServiceImpl implements MainService {
         this.list = new ListInit();
         this.students = list.getStudentsList();
         this.view = new AddStudentView();
-        this.studentCount = 0;
+        this.studentCount = 1;
         this.group = group;
     }
 
     @Override
     public List<Student> showAllStudents()  {
+
         return students;
     }
 
@@ -75,14 +76,13 @@ public class MainServiceImpl implements MainService {
     @Override
     public void startApp() {
         view.printHelloMessage();
-        int size = view.getSize();
-        group = new Group(size);
         view.showAddStudentMassage();
-        addStudentView(size);
-        //view.showAllStudent(showAllStudents());
+        createGroup();
+        view.showAllStudent(showAllStudents());
     }
 
-    private void addStudentView(int size) {
+    private void createGroup() {
+        int size = view.getSize();
         do {
             view.showAddStudentMassage();
             addStudent(new Student(view.getName(), view.getAge(), view.getPhone()));

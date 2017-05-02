@@ -16,14 +16,18 @@ public class AddStudentView {
     private String name;
     private int age;
     private int phone;
-    private MainService service;
+
 
     public AddStudentView() {
+        initScanner();
+    }
+
+    private void initScanner() {
         scanner = new Scanner(System.in);
-        this.service = new MainServiceImpl();
     }
 
     public void showAddStudentMassage() {
+
         System.out.println("Enter student name");
         name = scanner.next();
         System.out.println("Enter student age");
