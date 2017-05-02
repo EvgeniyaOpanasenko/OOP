@@ -10,10 +10,15 @@ public class Group {
     private int size;
     private List<Student> students;
 
-    public Group(int size) {
+    public Group(int size, List<Student> students) {
+        this.size = size;
+        this.students = students;
+    }
+
+    /*public Group(int size) {
         this.size = this.size;
         this.students = getStudentsList();
-    }
+    }*/
 
     @Override
     public String toString() {

@@ -27,7 +27,6 @@ public class AddStudentView {
     }
 
     public void showAddStudentMassage() {
-
         System.out.println("Enter student name");
         name = scanner.next();
         System.out.println("Enter student age");

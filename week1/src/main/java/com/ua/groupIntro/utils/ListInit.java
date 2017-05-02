@@ -11,6 +11,7 @@ public class ListInit {
     private static final List<Student> INSTANCE = new ArrayList<Student>();
 
     public static List<Student> getStudentsList() {
+
         return INSTANCE;
     }
 
