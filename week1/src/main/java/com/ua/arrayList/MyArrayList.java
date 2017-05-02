@@ -26,4 +26,6 @@ public interface MyArrayList {
     boolean add(int i);
 
     void print();
+
+    int[] subArray(int[] mas, int start, int end);
 }

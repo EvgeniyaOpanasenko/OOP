@@ -47,6 +47,17 @@ public class MyArrayListImpl implements MyArrayList {
         System.out.println(Arrays.toString(mas));
     }
 
+    //{1,2,3,4}; {1,2) => 2
+    @Override
+    public int[] subArray(int[] mas, int start, int end) {
+        int[] res = new int[end - start];
+
+        for (int i = start; i < res.length; i++, start ++) {
+            res[i] = start;
+        }
+        return new int[0];
+    }
+
     public int size() {
         return defaultCapasity;
     }
@@ -109,6 +120,7 @@ public class MyArrayListImpl implements MyArrayList {
         throw new EmptyArrayException();
     }
 
+
     @Override
     public int sum(int[] a, int[] b) {
         return 0;
@@ -123,4 +135,5 @@ public class MyArrayListImpl implements MyArrayList {
     public int[] sort() {
         return mas;
     }
+
 }
