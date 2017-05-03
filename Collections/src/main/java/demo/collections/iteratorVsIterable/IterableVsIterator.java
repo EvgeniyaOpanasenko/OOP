@@ -8,8 +8,6 @@ public class IterableVsIterator {
         String[] technologies = {"Java", "JEE", "XML"};
         MyIterable<String> entity = new MyIterable<>(technologies);
 
-        entity.iterator();
-
         for (String i:entity) {
             System.out.println(i);
         }
