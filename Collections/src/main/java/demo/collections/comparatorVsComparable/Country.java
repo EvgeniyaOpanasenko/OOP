@@ -1,4 +1,4 @@
-package demo.collections.comparatorvsComparable;
+package demo.collections.comparatorVsComparable;
 
 import java.util.Comparator;
 
