@@ -15,10 +15,9 @@ public class Group {
         this.students = students;
     }
 
-    /*public Group(int size) {
-        this.size = this.size;
-        this.students = getStudentsList();
-    }*/
+    public String getName(int index){
+        return students.get(index).getName();
+    }
 
     @Override
     public String toString() {
