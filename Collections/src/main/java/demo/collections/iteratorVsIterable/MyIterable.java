@@ -15,9 +15,6 @@ public class MyIterable<T> implements Iterable<T> {
         this.array = array;
     }
 
-    public MyIterable() {
-    }
-
     @Override
     public Iterator<T> iterator() {
         return new Iterator<T>() {
