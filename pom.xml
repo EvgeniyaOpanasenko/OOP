@@ -13,6 +13,7 @@
         <module>OOPprinciplesTest</module>
         <module>Collections</module>
         <module>week2</module>
+        <module>week3</module>
     </modules>
 
     <dependencies>

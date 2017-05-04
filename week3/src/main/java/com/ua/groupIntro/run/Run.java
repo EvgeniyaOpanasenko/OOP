@@ -1,8 +1,6 @@
-package com.ua.groupIntro;
+package com.ua.groupIntro.run;
 
 import com.ua.groupIntro.exceptions.DuplicateDatException;
-import com.ua.groupIntro.model.Group;
-import com.ua.groupIntro.model.Student;
 import com.ua.groupIntro.service.MainService;
 import com.ua.groupIntro.service.MainServiceImpl;
 
@@ -14,6 +12,7 @@ public class Run {
 
         MainService service = new MainServiceImpl();
         service.startApp();
+
 
     }
 }
