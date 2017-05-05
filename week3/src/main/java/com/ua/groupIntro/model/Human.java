@@ -1,28 +1,40 @@
 package com.ua.groupIntro.model;
 
+import java.io.Serializable;
+import java.util.Date;
+
 /**
  * Created by User on 5/4/2017.
  */
-public class Human {
+public class Human implements Serializable{
     private String name;
-    private int age;
-    private int phone;
-
-    public Human(String name, int age, int phone) {
-        this.name = name;
-        this.age = age;
-        this.phone = phone;
-    }
+    private Address address;
+    private Date birthday;
+    private ContactData contacts;
+    private String idNum;
+    private static int idCounter = 0;
 
     public Human() {
+    }
+
+    public Human(String name, Address address,
+                 Date birthday, ContactData contacts) {
+        this.name = name;
+        this.address = address;
+        this.birthday = birthday;
+        this.contacts = contacts;
+        this.idNum = String.valueOf(idCounter);
+        idCounter++;
     }
 
     @Override
     public String toString() {
         return "Human{" +
                 "name='" + name + '\'' +
-                ", age=" + age +
-                ", phone=" + phone +
+                ", address=" + address +
+                ", birthday=" + birthday +
+                ", contacts=" + contacts +
+                ", idNum='" + idNum + '\'' +
                 '}';
     }
 
@@ -34,24 +46,43 @@ public class Human {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public Address getAddress() {
+        return address;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
-    public int getPhone() {
-        return phone;
+    public Date getBirthday() {
+        return birthday;
     }
 
-    public void setPhone(int phone) {
-        this.phone = phone;
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
     }
 
-    //protected and private mrthods will not be available for kid's class
-    protected void checkOut (){
+    public ContactData getContacts() {
+        return contacts;
+    }
 
+    public void setContacts(ContactData contacts) {
+        this.contacts = contacts;
+    }
+
+    public String getIdNum() {
+        return idNum;
+    }
+
+    public void setIdNum(String idNum) {
+        this.idNum = idNum;
+    }
+
+    public static int getIdCounter() {
+        return idCounter;
+    }
+
+    public static void setIdCounter(int idCounter) {
+        Human.idCounter = idCounter;
     }
 }

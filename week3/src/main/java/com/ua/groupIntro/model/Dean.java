@@ -1,14 +1,20 @@
 package com.ua.groupIntro.model;
 
+import java.util.Date;
+
 /**
  * Created by User on 5/4/2017.
  */
 public class Dean extends Human {
+
     private long blackMoney;
     private Human secretary;
 
-    public Dean(String name, int age, int phone) {
-        super(name, age, phone);
+    public Dean(String name, Address address, Date birthday,
+                ContactData contacts, long blackMoney, Human secretary) {
+        super(name, address, birthday, contacts);
+        this.blackMoney = blackMoney;
+        this.secretary = secretary;
     }
 
     public Dean() {
