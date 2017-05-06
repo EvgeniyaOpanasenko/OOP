@@ -4,12 +4,11 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.ua.groupIntro.model.Student;
+import com.ua.groupIntro.model.Worker;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.ua.groupIntro.Utils.getInstance;
 
 /**
  * two main methods read from DB
@@ -18,25 +17,25 @@ import static com.ua.groupIntro.Utils.getInstance;
  */
 public class FileSaver {
 
-    private String studentDB = "week3/src/main/resources/student.db";
+    private String pathDB = "week3/src/main/resources/university.db";
     private Gson gson;
     //private List<Student> students;
 
     public FileSaver() {
-        this.studentDB = studentDB;
+        this.pathDB = pathDB;
         this.gson = new GsonBuilder().setPrettyPrinting().create();
         //List<Student> students = getInstance();
     }
 
-    public List<Student> read() {
-        List<Student> students;
+    public List<Worker> read() {
+        List<Worker> workers;
         try {
-            BufferedReader br = new BufferedReader(new FileReader(studentDB));
-            students = gson.fromJson(br, new TypeToken<List<Student>>() {
+            BufferedReader br = new BufferedReader(new FileReader(pathDB));
+            workers = gson.fromJson(br, new TypeToken<List<Worker>>() {
             }.getType());
-            if (students == null) {
-                students = new ArrayList<>();
-            }return students;
+            if (workers == null) {
+                workers = new ArrayList<>();
+            }return workers;
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -45,10 +44,10 @@ public class FileSaver {
         return null;
     }
 
-    public void save(List<Student> students) {
-        String json = gson.toJson(students);
+    public void save(List<Worker> workers) {
+        String json = gson.toJson(workers);
 
-        try (FileWriter writer = new FileWriter(studentDB)) {
+        try (FileWriter writer = new FileWriter(pathDB)) {
             writer.write(json);
         } catch (IOException e) {
             e.printStackTrace();

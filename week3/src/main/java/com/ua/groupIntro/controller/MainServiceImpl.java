@@ -2,6 +2,7 @@ package com.ua.groupIntro.controller;
 
 import com.ua.groupIntro.model.Dean;
 import com.ua.groupIntro.model.Student;
+import com.ua.groupIntro.model.Worker;
 import com.ua.groupIntro.utils.FileSaver;
 
 import java.util.List;
@@ -12,28 +13,36 @@ import java.util.List;
 public class MainServiceImpl implements MainService {
 
     private FileSaver fileSaver;
-    private List<Student> students;
+    private List<Worker> workers;
 
     public MainServiceImpl() {
         this.fileSaver = new FileSaver();
-        this.students = fileSaver.read();
+        this.workers = fileSaver.read();
     }
 
-    @Override
+   /* @Override
     public boolean create(Student student) {
-        students.add(student);
-        fileSaver.save(students);
+        workers.add(student);
+        fileSaver.save(workers);
         return true;
     }
 
     @Override
     public boolean create(Dean dean) {
         return false;
+    }*/
+
+    @Override
+    public boolean create(Worker worker) {
+        workers.add(worker);
+        fileSaver.save(workers);
+        return true;
     }
 
     @Override
-    public List<Student> getAllStudents() {
-        return students;
+    public List<Worker> getAllStudents() {
+
+        return workers;
     }
 
     @Override

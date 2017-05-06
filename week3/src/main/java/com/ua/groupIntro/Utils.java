@@ -12,4 +12,11 @@ public class Utils {
     public static List<Student> getInstance() {
         return INSTANCE;
     }
+
+    private final static double INSTANCE_ACCOUNT_BALANCE = 0;
+
+    public static double getInstanceAccountBalance() {
+        return INSTANCE_ACCOUNT_BALANCE;
+    }
 }
+

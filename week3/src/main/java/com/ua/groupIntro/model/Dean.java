@@ -5,19 +5,26 @@ import java.util.Date;
 /**
  * Created by User on 5/4/2017.
  */
-public class Dean extends Human {
+public class Dean extends Worker {
 
     private long blackMoney;
-    private Human secretary;
+    //private Secretary secretary;
 
     public Dean(String name, Address address, Date birthday,
-                ContactData contacts, long blackMoney, Human secretary) {
-        super(name, address, birthday, contacts);
-        this.blackMoney = blackMoney;
-        this.secretary = secretary;
+                ContactData contacts, long blackMoney, double salary) {
+        super(name, address, birthday, contacts, salary);
+        this.blackMoney = 2000;
+
     }
 
     public Dean() {
+    }
+
+
+    @Override
+    public void work() {
+        super.work();
+        System.out.println("dean works");
     }
 
     public long getBlackMoney() {
@@ -28,11 +35,4 @@ public class Dean extends Human {
         this.blackMoney = blackMoney;
     }
 
-    public Human getSecretary() {
-        return secretary;
-    }
-
-    public void setSecretary(Human secretary) {
-        this.secretary = secretary;
-    }
 }

@@ -5,15 +5,15 @@ import java.util.Date;
 /**
  * Created by User on 5/2/2017.
  */
-public class Student extends Human {
+public class Student extends Worker {
 
     private static double monthMoney = 790;
     private int rank;
     private ParentsData parentsData;
 
     public Student(String name, Address address, Date birthday,
-                   ContactData contacts, int rank, ParentsData parentsData) {
-        super(name, address, birthday, contacts);
+                   ContactData contacts, int rank, ParentsData parentsData, double salary) {
+        super(name, address, birthday, contacts, salary);
         this.rank = rank;
         this.parentsData = parentsData;
     }
