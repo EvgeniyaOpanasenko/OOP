@@ -2,10 +2,8 @@ package com.ua.groupIntro.model.role;
 
 import com.ua.groupIntro.model.common.Address;
 import com.ua.groupIntro.model.common.ParentsData;
-import com.ua.groupIntro.world.Pub;
 import com.ua.groupIntro.world.role.IAlcoholic;
 import com.ua.groupIntro.world.role.ISportsman;
-import com.ua.groupIntro.world.role.Sportsman;
 
 import java.util.Date;
 
