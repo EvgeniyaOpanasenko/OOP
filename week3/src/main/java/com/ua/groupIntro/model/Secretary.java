@@ -13,4 +13,14 @@ public class Secretary extends Worker {
     public Secretary(String name, Address address, Date birthday, ContactData contacts, double salary) {
         super(name, address, birthday, contacts, salary);
     }
+
+    @Override
+    public void work() {
+        System.out.println("Secretary works");
+    }
+
+    @Override
+    public void makeReport() {
+        System.out.println("Secretary report");
+    }
 }

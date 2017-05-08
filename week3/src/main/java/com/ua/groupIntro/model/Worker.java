@@ -7,7 +7,7 @@ import static com.ua.groupIntro.Utils.getInstanceAccountBalance;
 /**
  * Created by User on 5/5/2017.
  */
-public class Worker extends Human {
+public abstract class Worker extends Human {
 
     public static final int WORK_DAY_HOURS = 8;
     private double salary;
@@ -55,11 +55,8 @@ public class Worker extends Human {
 
     public void work() {
         amountHours += WORK_DAY_HOURS;
-        System.out.println("Work hard");
+        System.out.println("Work hard in Worker class");
     }
 
-    public void work(int hours) {
-        amountHours += hours;
-        System.out.println("Work hard");
-    }
+    public abstract void makeReport();
 }

@@ -23,6 +23,11 @@ public class Student extends Worker {
     }
 
     @Override
+    public void makeReport() {
+        System.out.println("Student report");
+    }
+
+    @Override
     public String toString() {
         return "Student{" +
                 "rank=" + rank +

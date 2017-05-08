@@ -23,8 +23,13 @@ public class Dean extends Worker {
 
     @Override
     public void work() {
-        super.work();
-        System.out.println("dean works");
+        //super.work();
+        System.out.println("dean works in Dean class");
+    }
+
+    @Override
+    public void makeReport() {
+        System.out.println("Dean repoet");
     }
 
     public long getBlackMoney() {
@@ -33,6 +38,10 @@ public class Dean extends Worker {
 
     public void setBlackMoney(long blackMoney) {
         this.blackMoney = blackMoney;
+    }
+
+    public void deanWork(){
+        System.out.println("Dean works");
     }
 
 }

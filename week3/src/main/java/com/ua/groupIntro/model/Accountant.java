@@ -25,4 +25,9 @@ public class Accountant extends Worker {
             System.out.println("Secretary in");
         }
     }
+
+    @Override
+    public void makeReport() {
+        System.out.println("Accountant report");
+    }
 }
