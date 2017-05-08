@@ -1,4 +1,4 @@
-package com.ua.groupIntro.model;
+package com.ua.groupIntro.model.role;
 
 /**
  * Created by User on 5/2/2017.

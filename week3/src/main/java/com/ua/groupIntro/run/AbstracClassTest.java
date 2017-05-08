@@ -1,6 +1,10 @@
 package com.ua.groupIntro.run;
 
-import com.ua.groupIntro.model.*;
+import com.ua.groupIntro.model.common.Address;
+import com.ua.groupIntro.model.role.ContactData;
+import com.ua.groupIntro.model.role.Dean;
+import com.ua.groupIntro.model.role.Manager;
+import com.ua.groupIntro.model.role.Worker;
 
 import java.util.Date;
 
@@ -16,7 +20,6 @@ public class AbstracClassTest {
                 new ContactData("Contact", "contact"),12,4000);
 
         Manager manager = new Manager();
-       
 
         Worker worker = new Dean();
 

@@ -1,8 +1,7 @@
 package com.ua.groupIntro.controller;
 
-import com.ua.groupIntro.model.Dean;
-import com.ua.groupIntro.model.Student;
-import com.ua.groupIntro.model.Worker;
+import com.ua.groupIntro.model.role.Dean;
+import com.ua.groupIntro.model.role.Worker;
 import com.ua.groupIntro.utils.FileSaver;
 
 import java.util.List;

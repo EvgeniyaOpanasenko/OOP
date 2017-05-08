@@ -1,4 +1,6 @@
-package com.ua.groupIntro.model;
+package com.ua.groupIntro.model.common;
+
+import com.ua.groupIntro.model.role.Student;
 
 import java.util.List;
 

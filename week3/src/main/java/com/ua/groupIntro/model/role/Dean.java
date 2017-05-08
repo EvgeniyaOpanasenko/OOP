@@ -1,4 +1,6 @@
-package com.ua.groupIntro.model;
+package com.ua.groupIntro.model.role;
+
+import com.ua.groupIntro.model.common.Address;
 
 import java.util.Date;
 

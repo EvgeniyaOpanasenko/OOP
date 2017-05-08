@@ -1,11 +1,18 @@
-package com.ua.groupIntro.model;
+package com.ua.groupIntro.model.role;
+
+import com.ua.groupIntro.model.common.Address;
+import com.ua.groupIntro.model.common.ParentsData;
+import com.ua.groupIntro.world.Pub;
+import com.ua.groupIntro.world.role.IAlcoholic;
+import com.ua.groupIntro.world.role.ISportsman;
+import com.ua.groupIntro.world.role.Sportsman;
 
 import java.util.Date;
 
 /**
  * Created by User on 5/2/2017.
  */
-public class Student extends Worker {
+public class Student extends Worker implements ISportsman, IAlcoholic {
 
     private static double monthMoney = 790;
     private int rank;
@@ -57,5 +64,15 @@ public class Student extends Worker {
 
     public void setParentsData(ParentsData parentsData) {
         this.parentsData = parentsData;
+    }
+
+    @Override
+    public void doExercise() {
+        System.out.println("Jump");
+    }
+
+    @Override
+    public void spendMoney() {
+        System.out.println("Drink");
     }
 }

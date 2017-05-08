@@ -1,7 +1,7 @@
 package com.ua.groupIntro.utils;
 
-import com.ua.groupIntro.model.Dean;
-import com.ua.groupIntro.model.Student;
+import com.ua.groupIntro.model.role.Dean;
+import com.ua.groupIntro.model.role.Student;
 
 /**
  * Created by User on 5/4/2017.

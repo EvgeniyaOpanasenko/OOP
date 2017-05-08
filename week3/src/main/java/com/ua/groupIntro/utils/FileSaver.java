@@ -3,8 +3,7 @@ package com.ua.groupIntro.utils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import com.ua.groupIntro.model.Student;
-import com.ua.groupIntro.model.Worker;
+import com.ua.groupIntro.model.role.Worker;
 
 import java.io.*;
 import java.util.ArrayList;

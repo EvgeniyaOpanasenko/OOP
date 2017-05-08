@@ -1,8 +1,8 @@
 package com.ua.groupIntro.run;
 
-import com.ua.groupIntro.model.Dean;
-import com.ua.groupIntro.model.Student;
-import com.ua.groupIntro.model.Worker;
+import com.ua.groupIntro.model.role.Dean;
+import com.ua.groupIntro.model.role.Student;
+import com.ua.groupIntro.model.role.Worker;
 
 /**
  * Created by User on 5/6/2017.

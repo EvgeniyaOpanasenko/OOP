@@ -2,11 +2,11 @@ package com.ua.groupIntro.run;
 
 import com.ua.groupIntro.controller.MainService;
 import com.ua.groupIntro.controller.MainServiceImpl;
-import com.ua.groupIntro.model.*;
+import com.ua.groupIntro.model.common.Address;
+import com.ua.groupIntro.model.common.ParentsData;
+import com.ua.groupIntro.model.role.*;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 /**
  * Created by User on 5/4/2017.
