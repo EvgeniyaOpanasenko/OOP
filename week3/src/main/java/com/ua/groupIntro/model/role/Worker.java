@@ -73,6 +73,8 @@ public abstract class Worker extends Human {
                 "salary=" + salary +
                 ", amountHours=" + amountHours +
                 ", accountBalance=" + accountBalance +
+                ", role=" + role +
+                ", position='" + position + '\'' +
                 '}';
     }
 }

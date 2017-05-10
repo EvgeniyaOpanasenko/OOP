@@ -1,5 +1,6 @@
 package com.ua.groupIntro.controller;
 
+import com.ua.comparators.ComparatorByName;
 import com.ua.groupIntro.model.role.Dean;
 import com.ua.groupIntro.model.role.Human;
 import com.ua.groupIntro.model.role.Student;
@@ -8,30 +9,31 @@ import com.ua.groupIntro.utils.FileSaver;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class MainServiceImpl implements MainService {
 
     private FileSaver fileSaver;
-    private List<Human> workers;
+    private List<Human> humanList;
     private List<Dean> deans;
 
     public MainServiceImpl() {
         this.fileSaver = new FileSaver();
-        this.workers = new ArrayList<>(fileSaver.read());
+        this.humanList = new ArrayList<>(fileSaver.read());
 
     }
 
     @Override
     public boolean create(Human human) {
-        workers.add(human);
-        fileSaver.save(workers);
+        humanList.add(human);
+        fileSaver.save(humanList);
         return true;
     }
 
     @Override
     public List<Student> getAllStudents() {
 
-        //workers.stream().forEach(student -> s);
+        humanList.stream().filter(human -> "STUDENT".equals(human)).collect(Collectors.toList());
 
         return null;
     }
@@ -50,12 +52,24 @@ public class MainServiceImpl implements MainService {
 
     @Override
     public List<Human> getAllWorkers() {
-        return workers;
+
+        return humanList;
     }
+
+  /*  @Override
+    public List<Human> sortWorker() {
+        humanList.sort(new Comparator<Human>() {
+            @Override
+            public int compare(Human o1, Human o2) {
+                return o1.getName().compareTo(o2.getName());
+            }
+        });
+        return humanList;
+    }*/
 
     @Override
     public List<Human> sortWorker() {
-
-       return null;
+        humanList.sort(new ComparatorByName());
+        return humanList;
     }
 }

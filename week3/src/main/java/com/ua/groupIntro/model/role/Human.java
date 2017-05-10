@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * Created by User on 5/4/2017.
  */
-public class Human implements Serializable {
+public class Human implements Serializable, Comparable<Human> {
     private String name;
     private Address address;
     private Date birthday;
@@ -101,5 +101,10 @@ public class Human implements Serializable {
                 ", contacts=" + contacts +
                 ", idNum='" + idNum + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Human o) {
+        return this.getName().compareTo(o.getName());
     }
 }

@@ -22,7 +22,6 @@ public class Dean extends Worker {
     public Dean() {
     }
 
-
     @Override
     public void work() {
         //super.work();
@@ -46,4 +45,10 @@ public class Dean extends Worker {
         System.out.println("Dean works");
     }
 
+    @Override
+    public String toString() {
+        return "Dean{" +
+                "blackMoney=" + blackMoney +
+                '}';
+    }
 }
