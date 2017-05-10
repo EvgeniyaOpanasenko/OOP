@@ -1,5 +1,6 @@
 package com.ua.groupIntro.controller;
 
+import com.ua.comparators.ComparatorByCountry;
 import com.ua.comparators.ComparatorByName;
 import com.ua.groupIntro.model.role.Dean;
 import com.ua.groupIntro.model.role.Human;
@@ -57,7 +58,7 @@ public class MainServiceImpl implements MainService {
     }
 
   /*  @Override
-    public List<Human> sortWorker() {
+    public List<Human> sortWorkerByName() {
         humanList.sort(new Comparator<Human>() {
             @Override
             public int compare(Human o1, Human o2) {
@@ -68,8 +69,14 @@ public class MainServiceImpl implements MainService {
     }*/
 
     @Override
-    public List<Human> sortWorker() {
+    public List<Human> sortWorkerByName() {
         humanList.sort(new ComparatorByName());
+        return humanList;
+    }
+
+    @Override
+    public List<Human> sortWorkerByCountry() {
+        humanList.sort(new ComparatorByCountry());
         return humanList;
     }
 }

@@ -20,5 +20,7 @@ public interface MainService {
     List<Worker> filterByName();
     List<Human> getAllWorkers();
     //List<Worker> sort();
-    List<Human> sortWorker();
+    List<Human> sortWorkerByName();
+
+    List<Human> sortWorkerByCountry();
 }

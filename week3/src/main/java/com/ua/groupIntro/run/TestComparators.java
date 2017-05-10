@@ -5,7 +5,6 @@ import com.ua.groupIntro.controller.MainServiceImpl;
 import com.ua.groupIntro.model.role.Human;
 import com.ua.groupIntro.model.role.Student;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static com.ua.groupIntro.utils.InitDb.initDB;
@@ -24,7 +23,8 @@ public class TestComparators {
         List<Student> students = service.getAllStudents();
 
         System.out.println(university);
-        System.out.println(service.sortWorker());
+        System.out.println(service.sortWorkerByName());
+        System.out.println(service.sortWorkerByCountry());
 
     }
 }
