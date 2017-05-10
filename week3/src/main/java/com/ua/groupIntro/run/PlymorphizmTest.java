@@ -1,6 +1,7 @@
 package com.ua.groupIntro.run;
 
 import com.ua.groupIntro.model.role.Dean;
+import com.ua.groupIntro.model.role.Human;
 import com.ua.groupIntro.model.role.Student;
 import com.ua.groupIntro.model.role.Worker;
 
@@ -14,7 +15,7 @@ public class PlymorphizmTest {
         workerDean.work();
 
         // no work method overwriting
-        Worker workerStudent = new Student();
-        workerStudent.work();
+        Student student = new Student();
+        student.doExercise();
     }
 }

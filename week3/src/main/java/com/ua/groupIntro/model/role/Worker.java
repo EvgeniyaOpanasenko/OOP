@@ -1,6 +1,7 @@
 package com.ua.groupIntro.model.role;
 
 import com.ua.groupIntro.model.common.Address;
+import com.ua.groupIntro.model.enums.Role;
 
 import java.util.Date;
 
@@ -15,18 +16,19 @@ public abstract class Worker extends Human {
     private double salary;
     private int amountHours;
     private double accountBalance;
+    private Enum role;
+    private String position;
 
     public Worker() {
-
     }
-
 
     public Worker(String name, Address address, Date birthday,
                   ContactData contacts, double salary) {
         super(name, address, birthday, contacts);
         this.salary = salary;
-
         this.accountBalance = getInstanceAccountBalance();
+        this.role = Role.WORKER;
+        this.position = this.getClass().getSimpleName();
 
     }
 
@@ -54,6 +56,9 @@ public abstract class Worker extends Human {
         this.amountHours = amountHours;
     }
 
+    public String getPosition() {
+        return position;
+    }
 
     public void work() {
         amountHours += WORK_DAY_HOURS;
@@ -61,4 +66,13 @@ public abstract class Worker extends Human {
     }
 
     public abstract void makeReport();
+
+    @Override
+    public String toString() {
+        return "Worker{" +
+                "salary=" + salary +
+                ", amountHours=" + amountHours +
+                ", accountBalance=" + accountBalance +
+                '}';
+    }
 }

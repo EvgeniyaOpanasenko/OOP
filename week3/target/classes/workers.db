@@ -1,44 +1,5 @@
 [
   {
-    "salary": 4000.0,
-    "amountHours": 0,
-    "accountBalance": 0.0,
-    "name": "Eva",
-    "address": {
-      "country": "Kiev",
-      "city": "Kiev",
-      "street": "kiev",
-      "houseNum": 12
-    },
-    "birthday": "Jan 12, 1913 12:00:00 AM",
-    "contacts": {
-      "email": "Contact",
-      "phone": "contact"
-    },
-    "idNum": "0"
-  },
-  {
-    "salary": 4000.0,
-    "amountHours": 0,
-    "accountBalance": 0.0,
-    "name": "Eva",
-    "address": {
-      "country": "Kiev",
-      "city": "Kiev",
-      "street": "kiev",
-      "houseNum": 12
-    },
-    "birthday": "Jan 12, 1913 12:00:00 AM",
-    "contacts": {
-      "email": "Contact",
-      "phone": "contact"
-    },
-    "idNum": "0"
-  },
-  {
-    "salary": 4000.0,
-    "amountHours": 0,
-    "accountBalance": 0.0,
     "name": "Eva",
     "address": {
       "country": "Kiev",
@@ -54,9 +15,33 @@
     "idNum": "2"
   },
   {
+    "blackMoney": 2000,
     "salary": 4000.0,
     "amountHours": 0,
     "accountBalance": 0.0,
+    "role": "WORKER",
+    "position": "Dean",
+    "name": "Eva",
+    "address": {
+      "country": "Kiev",
+      "city": "Kiev",
+      "street": "kiev",
+      "houseNum": 12
+    },
+    "birthday": "Jan 12, 1913 12:00:00 AM",
+    "contacts": {
+      "email": "Contact",
+      "phone": "contact"
+    },
+    "idNum": "0"
+  },
+  {
+    "rank": 12,
+    "parentsData": {
+      "mother": "mama",
+      "father": "papa"
+    },
+    "role": "STUDENT",
     "name": "Eva",
     "address": {
       "country": "Kiev",
@@ -77,9 +62,7 @@
       "mother": "mama",
       "father": "papa"
     },
-    "salary": 4000.0,
-    "amountHours": 0,
-    "accountBalance": 0.0,
+    "role": "STUDENT",
     "name": "Eva",
     "address": {
       "country": "Kiev",
@@ -92,6 +75,27 @@
       "email": "Contact",
       "phone": "contact"
     },
-    "idNum": "2"
+    "idNum": "3"
+  },
+  {
+    "blackMoney": 2000,
+    "salary": 4000.0,
+    "amountHours": 0,
+    "accountBalance": 0.0,
+    "role": "WORKER",
+    "position": "Dean",
+    "name": "Eva",
+    "address": {
+      "country": "Kiev",
+      "city": "Kiev",
+      "street": "kiev",
+      "houseNum": 12
+    },
+    "birthday": "Jan 12, 1913 12:00:00 AM",
+    "contacts": {
+      "email": "Contact",
+      "phone": "contact"
+    },
+    "idNum": "4"
   }
 ]

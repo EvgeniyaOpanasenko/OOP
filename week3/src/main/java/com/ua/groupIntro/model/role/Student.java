@@ -2,35 +2,30 @@ package com.ua.groupIntro.model.role;
 
 import com.ua.groupIntro.model.common.Address;
 import com.ua.groupIntro.model.common.ParentsData;
+import com.ua.groupIntro.model.enums.Role;
 import com.ua.groupIntro.world.role.IAlcoholic;
 import com.ua.groupIntro.world.role.ISportsman;
 
 import java.util.Date;
 
-/**
- * Created by User on 5/2/2017.
- */
-public class Student extends Worker implements ISportsman, IAlcoholic {
+public class Student extends Human implements ISportsman, IAlcoholic {
 
     private static double monthMoney = 790;
     private int rank;
     private ParentsData parentsData;
+    private Enum role;
 
-    public Student(String name, Address address, Date birthday,
-                   ContactData contacts, int rank, ParentsData parentsData, double salary) {
-        super(name, address, birthday, contacts, salary);
+   public Student(String name, Address address, Date birthday,
+                          ContactData contacts, int rank, ParentsData parentsData) {
+        super(name, address, birthday, contacts);
         this.rank = rank;
         this.parentsData = parentsData;
+        this.role = Role.STUDENT;
     }
 
-   public Student() {
-
+    public Student() {
     }
 
-    @Override
-    public void makeReport() {
-        System.out.println("Student report");
-    }
 
     @Override
     public String toString() {

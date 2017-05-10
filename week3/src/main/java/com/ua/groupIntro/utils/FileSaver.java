@@ -3,6 +3,7 @@ package com.ua.groupIntro.utils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
+import com.ua.groupIntro.model.role.Human;
 import com.ua.groupIntro.model.role.Worker;
 
 import java.io.*;
@@ -16,26 +17,24 @@ import java.util.List;
  */
 public class FileSaver {
 
-    private String pathDB = "week3/src/main/resources/university.db";
+    private String pathDB = "week3/src/main/resources/workers.db";
     private Gson gson;
     //private List<Student> students;
 
     public FileSaver() {
         this.pathDB = pathDB;
         this.gson = new GsonBuilder().setPrettyPrinting().create();
-        //List<Student> students = getInstance();
     }
 
-    public List<Worker> read() {
-        List<Worker> workers;
+    public List<Human> read() {
+        //List<Worker> workers = new ArrayList<>();
         try {
             BufferedReader br = new BufferedReader(new FileReader(pathDB));
-            workers = gson.fromJson(br, new TypeToken<List<Worker>>() {
-            }.getType());
-            if (workers == null) {
+            List<Human> workers = gson.fromJson(br, new TypeToken<List<Human>>(){}.getType());
+            if(workers == null){
                 workers = new ArrayList<>();
-            }return workers;
-
+            }
+            return workers;
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -43,7 +42,7 @@ public class FileSaver {
         return null;
     }
 
-    public void save(List<Worker> workers) {
+    public void save(List<Human> workers) {
         String json = gson.toJson(workers);
 
         try (FileWriter writer = new FileWriter(pathDB)) {

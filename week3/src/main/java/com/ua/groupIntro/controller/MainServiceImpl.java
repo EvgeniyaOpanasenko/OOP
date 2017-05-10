@@ -1,51 +1,61 @@
 package com.ua.groupIntro.controller;
 
 import com.ua.groupIntro.model.role.Dean;
+import com.ua.groupIntro.model.role.Human;
+import com.ua.groupIntro.model.role.Student;
 import com.ua.groupIntro.model.role.Worker;
 import com.ua.groupIntro.utils.FileSaver;
 
+import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by User on 5/4/2017.
- */
 public class MainServiceImpl implements MainService {
 
     private FileSaver fileSaver;
-    private List<Worker> workers;
+    private List<Human> workers;
+    private List<Dean> deans;
 
     public MainServiceImpl() {
         this.fileSaver = new FileSaver();
-        this.workers = fileSaver.read();
+        this.workers = new ArrayList<>(fileSaver.read());
+
     }
 
-   /* @Override
-    public boolean create(Student student) {
-        workers.add(student);
+    @Override
+    public boolean create(Human human) {
+        workers.add(human);
         fileSaver.save(workers);
         return true;
     }
 
     @Override
-    public boolean create(Dean dean) {
-        return false;
-    }*/
+    public List<Student> getAllStudents() {
 
-    @Override
-    public boolean create(Worker worker) {
-        workers.add(worker);
-        fileSaver.save(workers);
-        return true;
-    }
+        //workers.stream().forEach(student -> s);
 
-    @Override
-    public List<Worker> getAllStudents() {
-
-        return workers;
+        return null;
     }
 
     @Override
     public List<Dean> getAllDeans() {
+
         return null;
+    }
+
+    @Override
+    public List<Worker> filterByName() {
+        List<Worker> result = new ArrayList<>();
+        return null;
+    }
+
+    @Override
+    public List<Human> getAllWorkers() {
+        return workers;
+    }
+
+    @Override
+    public List<Human> sortWorker() {
+
+       return null;
     }
 }

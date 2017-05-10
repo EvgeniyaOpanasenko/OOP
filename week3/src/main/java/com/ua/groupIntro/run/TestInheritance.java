@@ -19,32 +19,42 @@ public class TestInheritance {
 
         Dean dean12 = new Dean("Eva",
                 new Address("Kiev", "Kiev", "kiev", 12),
-                new Date(12,12,12),
-                new ContactData("Contact", "contact"),12,4000);
+                new Date(12, 12, 12),
+                new ContactData("Contact", "contact"), 12, 4000);
 
         Worker dean14 = new Dean("Eva",
                 new Address("Kiev", "Kiev", "kiev", 12),
-                new Date(12,12,12),
-                new ContactData("Contact", "contact"),12,4000);
+                new Date(12, 12, 12),
+                new ContactData("Contact", "contact"), 12, 4000);
 
-        accountant.paySalary(dean12);
+       /* accountant.paySalary(dean12);
         accountant.paySalary(dean14);
         System.out.println("dean 14 = " + dean14.getAccountBalance());
-        System.out.println("dean 12 = " + dean12.getAccountBalance());
+        System.out.println("dean 12 = " + dean12.getAccountBalance());*/
 
 
-
-        Student student = new Student("Eva",
+        Student student1 = new Student("Eva",
                 new Address("Kiev", "Kiev", "kiev", 12),
-                new Date(12,12,12),
-                new ContactData("Contact", "contact"),12,
-                new ParentsData("mama", "papa"), 4000);
+                new Date(12, 12, 12),
+                new ContactData("Contact", "contact"), 12,
+                new ParentsData("mama", "papa"));
+
+
+        Student student2 = new Student("Eva",
+                new Address("Kiev", "Kiev", "kiev", 12),
+                new Date(12, 12, 12),
+                new ContactData("Contact", "contact"), 12,
+                new ParentsData("mama", "papa"));
 
         Human human = new Dean("Eva",
                 new Address("Kiev", "Kiev", "kiev", 12),
-                new Date(12,12,12),
-                new ContactData("Contact", "contact"),12,4000);
+                new Date(12, 12, 12),
+                new ContactData("Contact", "contact"), 12, 4000);
 
+        service.create(dean12);
+        service.create(student1);
+        service.create(student2);
+        service.create(human);
 
        /* Worker student1 = new Student("Eva",
                 new Address("Kiev", "Kiev", "kiev", 12),
@@ -74,11 +84,6 @@ public class TestInheritance {
                 new Address("Kiev", "Kiev", "kiev", 12),
                 new Date(12,12,12),
                 new ContactData("Contact", "contact"),12,4000);*/
-
-
-
-
-
 
 
     }

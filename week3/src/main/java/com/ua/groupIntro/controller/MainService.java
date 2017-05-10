@@ -1,6 +1,8 @@
 package com.ua.groupIntro.controller;
 
 import com.ua.groupIntro.model.role.Dean;
+import com.ua.groupIntro.model.role.Human;
+import com.ua.groupIntro.model.role.Student;
 import com.ua.groupIntro.model.role.Worker;
 
 import java.util.List;
@@ -11,8 +13,12 @@ import java.util.List;
 public interface MainService {
     /*boolean create(Student student);
     boolean create(Dean dean);*/
-    boolean create(Worker worker);
+    boolean create(Human human);
 
-    List<Worker> getAllStudents();
+    List<Student> getAllStudents();
     List<Dean> getAllDeans();
+    List<Worker> filterByName();
+    List<Human> getAllWorkers();
+    //List<Worker> sort();
+    List<Human> sortWorker();
 }
