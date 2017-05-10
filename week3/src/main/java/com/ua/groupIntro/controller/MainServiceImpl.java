@@ -1,7 +1,7 @@
 package com.ua.groupIntro.controller;
 
-import com.ua.comparators.ComparatorByCountry;
-import com.ua.comparators.ComparatorByName;
+import com.ua.comparators.ComparatorByCountryComparator;
+import com.ua.comparators.ComparatorByNameComparator;
 import com.ua.groupIntro.model.role.Dean;
 import com.ua.groupIntro.model.role.Human;
 import com.ua.groupIntro.model.role.Student;
@@ -70,13 +70,13 @@ public class MainServiceImpl implements MainService {
 
     @Override
     public List<Human> sortWorkerByName() {
-        humanList.sort(new ComparatorByName());
+        humanList.sort(new ComparatorByNameComparator());
         return humanList;
     }
 
     @Override
     public List<Human> sortWorkerByCountry() {
-        humanList.sort(new ComparatorByCountry());
+        humanList.sort(new ComparatorByCountryComparator());
         return humanList;
     }
 }
