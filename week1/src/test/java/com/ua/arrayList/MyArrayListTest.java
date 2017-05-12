@@ -71,7 +71,7 @@ public class MyArrayListTest {
     public void sort() throws Exception {
         int[] mixedArr = {23, 65, 1, 5, 3};
         int[] expected = {0, 1, 15, 47};
-        assertArrayEquals(expected, list.sort());
+       // assertArrayEquals(expected, list.sortQiuck());
 
 
     }

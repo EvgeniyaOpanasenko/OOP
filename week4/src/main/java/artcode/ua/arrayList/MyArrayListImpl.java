@@ -1,66 +1,36 @@
-package com.ua.arrayList;
+package artcode.ua.arrayList;
 
 import java.util.Arrays;
 import java.util.NoSuchElementException;
 
 public class MyArrayListImpl implements MyArrayList {
 
-    private static final Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = {};
-    private static final int DEFAULT_CAPACITY = 10;
+    private final int defaultCapasity = 10;
     private int mas[];
     //size return number of not empty cells
     private int size;
-    private Object[] elementData;
-    // count the number of cells
-    private int modCount;
-    private int capasity;
-
-    private static final int MAX_ARRAY_SIZE = Integer.MAX_VALUE - 8;
-
-    public MyArrayListImpl(int capasity) {
-        this.capasity = DEFAULT_CAPACITY;
-        this.elementData = new Object[capasity];
-    }
 
     public MyArrayListImpl() {
-        //mas = new int[DEFAULT_CAPASITY];
-        this.elementData = DEFAULTCAPACITY_EMPTY_ELEMENTDATA;
+        mas = new int[defaultCapasity];
         size = 0;
     }
 
     @Override
     public boolean add(int element) {
-        ensureCapasity(size + 1);
-        elementData[size++] = element;
-        return true;
+        size++;
 
-    }
-
-    private void ensureCapasity(int minCapasity) {
-        if (elementData == DEFAULTCAPACITY_EMPTY_ELEMENTDATA){
-            minCapasity = Math.max(DEFAULT_CAPACITY, minCapasity);
+        for (int i = 0; i < mas.length; i++) {
+            if (isEpty(mas[i])) {
+                mas[i] = element;
+                return true;
+            }
         }
-
-        increaseCapasity(minCapasity);
-
-    }
-
-    private void increaseCapasity(int minCapasity) {
-        if (minCapasity - elementData.length > 0){
-           grow(minCapasity);
+        return false;
+        /*create(biggerMas(mas));
+        for (int i = 0; i < biggerMas.length; i++) {
+            if(!(is))
         }
-    }
-
-    private void grow(int minCapacity) {
-        // overflow-conscious code
-        int oldCapacity = elementData.length;
-        int newCapacity = oldCapacity + (oldCapacity >> 1);
-       /* if (newCapacity - minCapacity < 0)
-            newCapacity = minCapacity;
-        if (newCapacity - MAX_ARRAY_SIZE > 0)*/
-            //newCapacity = hugeCapacity(minCapacity);
-        // minCapacity is usually close to size, so this is a win:
-        elementData = Arrays.copyOf(elementData, newCapacity);
+        mas[defaultCapasity + 1] = element;*/
     }
 
     private boolean isEpty(int element) {
@@ -82,14 +52,14 @@ public class MyArrayListImpl implements MyArrayList {
     public int[] subArray(int[] mas, int start, int end) {
         int[] res = new int[end - start];
 
-        for (int i = start; i < res.length; i++, start++) {
+        for (int i = start; i < res.length; i++, start ++) {
             res[i] = start;
         }
         return new int[0];
     }
 
     public int size() {
-        return size;
+        return defaultCapasity;
     }
 
     @Override
@@ -157,19 +127,13 @@ public class MyArrayListImpl implements MyArrayList {
     }
 
     @Override
-    public int multAndSum(int[] a, int operand) {
-
-        int res = 0;
-        for (int i = 0; i < a.length; i++) {
-            res += a[i] * operand;
-        }
-        return res;
+    public int multAndSum(int[] a, int[] b) {
+        return 0;
     }
 
     @Override
-    public void sortQiuck() {
-        //Arrays.sort((E[]) elementData, 0, size, c);
-        //return Arrays.sort((mas[])elementData , 0, size);
-        Arrays.sort(mas);
+    public int[] sort() {
+        return mas;
     }
+
 }

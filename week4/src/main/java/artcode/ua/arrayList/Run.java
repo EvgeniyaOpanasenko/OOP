@@ -1,7 +1,4 @@
-package com.ua.arrayList;
-
-import java.util.ArrayList;
-import java.util.List;
+package artcode.ua.arrayList;
 
 /**
  * Created by Lisa on 4/27/2017.
@@ -24,7 +21,8 @@ public class Run {
         arr.add(1);
         arr.print();
 
-        arr.sortQiuck();
+        arr.sort();
+
 
     }
 }

@@ -1,4 +1,4 @@
-package com.ua.arrayList;
+package artcode.ua.arrayList;
 
 public interface MyArrayList {
 
@@ -19,9 +19,9 @@ public interface MyArrayList {
     int sum(int[] a, int[] b);
 
     // 1 2 3 4 * 3 = 3 + 6 + 9+ 12 = 30
-    int multAndSum(int[] a, int operand);
+    int multAndSum(int[] a, int[] b);
 
-    public void sortQiuck();
+    public int[] sort();
 
     boolean add(int i);
 
