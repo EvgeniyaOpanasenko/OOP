@@ -1,7 +1,5 @@
 package demo.collections.iteratorVsIterable;
 
-import sun.text.bidi.BidiBase;
-
 import java.util.Iterator;
 
 /**
