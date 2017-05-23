@@ -5,5 +5,5 @@ package artcode.ua.utils;
  */
 public interface ITimeAction {
 
-    public void action();
+    public boolean action();
 }
