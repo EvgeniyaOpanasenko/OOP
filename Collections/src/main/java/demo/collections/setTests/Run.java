@@ -11,7 +11,7 @@ import java.util.*;
 public class Run {
 
     public static void main(String[] args) {
-        Set<String> set = new TreeSet<>();
+       /* Set<String> set = new TreeSet<>();
         set.add("Eva");
         set.add("Olga");
         set.add("Eva");
@@ -37,7 +37,7 @@ public class Run {
         hashSet.add("Igor");
 
         System.out.println("HashSet");
-        System.out.println(hashSet);
+        System.out.println(hashSet);*/
 
         List<String> list = new ArrayList<>();
         list.add("Eva");
@@ -49,15 +49,29 @@ public class Run {
         list.add("Igor");
         list.add("Olga");
         list.add("Alina");
+        list.add(null);
 
         System.out.println("ArrayList");
         System.out.println(list);
 
-        Set arrayInSetTest = new TreeSet(list);
+       /* Set arrayInSetTest = new TreeSet(list);
         System.out.println("arrayInSetTest");
         System.out.println(arrayInSetTest);
 
-        Set linkedHasgSet = new LinkedHashSet();
+        Set linkedHashSet = new LinkedHashSet();
+        linkedHashSet.add("Eva");
+        linkedHashSet.add("Olga");
+        linkedHashSet.add("Olga");
+        linkedHashSet.add("Olga");
+        linkedHashSet.add("kate");
+        linkedHashSet.add("Pavel");
+        linkedHashSet.add("Igor");
+        linkedHashSet.add("Olga");
+        linkedHashSet.add("Alina");
+
+        System.out.println("linkedHashSet");
+        System.out.println(linkedHashSet);
+
 
 
     }
@@ -73,7 +87,8 @@ public class Run {
         @Override
         public void action() {
             list.add(o);
-        }
+        }*/
     }
+
 
 }
