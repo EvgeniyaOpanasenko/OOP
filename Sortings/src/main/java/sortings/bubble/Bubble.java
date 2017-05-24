@@ -16,11 +16,13 @@ public class Bubble {
         Sortings.bubbleSorting(arr);
 
         System.out.println();
-
-        System.out.println("sillySorting");
-
-        Sortings.sillySorting(arr);
+        System.out.println("Bubble sorting");
         (Arrays.stream(arr)).forEach(i -> System.out.print("[" + i + "]"));
+
+
+        /*System.out.println("sillySorting");
+        Sortings.sillySorting(arr);
+        (Arrays.stream(arr)).forEach(i -> System.out.print("[" + i + "]"));*/
 
     }
 }
